@@ -15,3 +15,15 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn kotlin.dom.**
+
+-keepattributes *Annotation*,SourceFile,LineNumberTable
+
+-keep class com.rutkevich.sample.logging.BuildConfig { *; }
+-keep class com.rutkevich.sample.logging.JavaLoggingActivity { *; }
+
+-assumenosideeffects class com.rutkevich.sample.logging.loggers.MyLogger {
+    public void d(...);
+}
+
